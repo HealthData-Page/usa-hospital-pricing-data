@@ -1,0 +1,68 @@
+.dashboard-card {
+    margin: 15px;
+    width: 400px;
+    background: #2c2c2c;
+  }
+  
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .dashboard-card-text-content {
+    text-align: left;
+    margin: 15px;
+    font-size:1.1em;
+  }
+  
+  .dashboard-card-content {
+    text-align: center;
+    margin: 15px;
+  }
+  
+  .dashboard-card-footer {
+    text-align: left;
+    margin: 15px;
+  }
+  
+  .search-input {
+    min-width: 200px;
+    max-width: 400px;
+    width: 100%;
+    font-size: medium;
+  }
+  
+  .exec-summary-card {
+    margin: 15px;
+  }
+  
+  .exec-summary {
+    text-align: center;
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .exec-summary p {
+    font-size: 1.6em;
+    line-height: 1.8em;
+  }
+  
+  .good {
+    font-size: 1.1em;
+    color: #69f0ae;
+    font-weight: bolder;
+  }
+  
+  .bad {
+    font-size: 1.1em;
+    color: orange;
+    font-weight: bolder;
+  }
+  
+  .worst {
+    font-size: 1.1em;
+    color: #f44336;
+    font-weight: bolder;
+  }

@@ -1,0 +1,40 @@
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/about']">About</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="app-header">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span [routerLink]="['/']" style="cursor: pointer">
+        USA Hospitals - Price Transparency</span>
+      <span class="nav-spacer"></span>
+      <button mat-button [routerLink]="['/about']">
+        <span>About</span>
+      </button>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+    <mat-toolbar class="footer" style="
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        font-weight: normal;
+        font-size: 0.9em;
+      ">
+      Made with
+      <mat-icon aria-hidden="false" aria-label="Learn More" color="warn">favorite</mat-icon>
+      by
+      <a href="https://www.teachingforgood.org" target="_blank" rel="noopener"> Teaching For Good Inc </a>
+      | <a href="/about#disclaimer">Disclaimer & Terms of Use</a>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
